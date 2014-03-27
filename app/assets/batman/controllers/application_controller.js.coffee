@@ -1,0 +1,1 @@
+class Batmanic.ApplicationController extends Batman.Controller
