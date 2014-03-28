@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+10.times do |i|
+  post = Post.create(title: Faker::SwansonQuote.sentence, content: Faker::SwansonQuote.paragraphs( (rand * 3 + 1).to_i ).join("\n\n") )
+  ((rand * 5).to_i).times { |j| post.comments.create( content: Faker::SwansonQuote.sentence ) }
+end
+
