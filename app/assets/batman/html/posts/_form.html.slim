@@ -1,9 +1,11 @@
-div
-  label Title:
-  input[data-bind='post.title']
+div.form-group[data-addclass-has-error='post.errors.title.length']
+  label.control-label Title:
+  input.form-control[data-bind='post.title']
+  span.form-control-feedback.text-error[data-showif="post.errors.title.length" data-foreach-error='post.errors.title' data-bind='error.message']
 
-div
-  label Content:
-  textarea[data-bind='post.content']
+div.form-group[data-addclass-has-error='post.errors.content.length']
+  label.control-label Content:
+  textarea.form-control[data-bind='post.content']
+  span.form-control-feedback.text-error[data-showif="post.errors.content.length" data-foreach-error='post.errors.content' data-bind='error.message']
 
 input[name='commit' type='submit' value='Submit']

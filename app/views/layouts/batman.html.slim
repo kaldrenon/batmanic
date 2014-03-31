@@ -1,0 +1,24 @@
+doctype html
+
+html
+head
+  title Batmanic
+  = stylesheet_link_tag("application", media: "all")
+  = javascript_include_tag("batmanic")
+  = csrf_meta_tags
+
+body
+  .navbar.navbar-default[role='navigation']
+    .navbar-header
+      a.navbar-brand Batmanic
+    ul.nav.navbar-nav
+      li
+        a[data-route='routes.posts'] Posts
+      li
+        a[data-route='routes.posts.new'] New Post
+
+  .container-fluid
+    div[data-yield="main"]
+
+  javascript:
+    Batmanic.run();

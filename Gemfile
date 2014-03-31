@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'batman-rails'
 gem 'slim'
 gem 'ffakeron'
+gem 'bootstrap-sass'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

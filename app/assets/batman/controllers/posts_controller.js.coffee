@@ -16,6 +16,7 @@ class Batmanic.PostsController extends Batmanic.ApplicationController
 
   create: (params) ->
     @post.save (err, post) =>
+      console.log @post.get('errors.title')
       if err
         throw err unless err instanceof Batman.ErrorsSet
       else

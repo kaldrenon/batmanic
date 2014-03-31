@@ -1,8 +1,13 @@
-span[data-bind="'post' | pluralize posts.length"]
+.row
+  .col-md-6
+    .row-fluid[data-foreach-post="posts"]
+      .col-md-8
+        a[data-bind="post.title" data-route="post"]
+      .col-md-4
+        a[data-event-click="destroy"]
+          span Destroy
 
-ul
-  li[data-foreach-post="posts"]
-    a[data-bind="post.title" data-route="post"]
-    span &nbsp;|&nbsp;
-    a[data-event-click="destroy"]
-      span Destroy
+.row
+  .col-md-12
+    p.bg-info
+      span[data-bind="'post' | pluralize posts.length"]
