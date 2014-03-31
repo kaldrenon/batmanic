@@ -1,0 +1,19 @@
+a[data-route='routes.posts'] Back to Posts
+h3[data-bind='post.title']
+p[data-bind='post.content']
+
+a[data-route='routes.posts[post].edit'] Edit
+span &nbsp;|&nbsp;
+a[data-event-click='destroy'] Destroy
+
+ul
+  li[data-foreach-comment="post.comments"]
+    p[data-bind='comment.content']
+    a[data-event-click='destroyComment'] Destroy
+
+form[data-formfor-comment='comment' data-event-submit='createComment']
+  div
+    label Content:
+    textarea[data-bind='comment.content']
+
+  input[name='commit' type='submit' value='Submit']
